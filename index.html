@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="jQuery Customization of input html file for Bootstrap Twitter">
+		<meta name="keywords" content="jquery customization input html file bootstrap twitter">
+		<meta name="author" content="markusslima">
+		<meta http-equiv="expires" content="Tue, 01 Jan 2013 00:00:00 GMT">
+		<meta http-equiv="cache-control" content="public" />
+		<meta http-equiv="Pragma" content="public">
+
+        <title>Subir Archivo</title>
+
+	<link rel="icon" type="image/png" href="icons/favicon.png">
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+<style>
+.block {
+  text-align: center;
+  margin: 20px;
+}
+ 
+.block:before {
+  content: '';
+  display: inline-block;
+  height: 100%; 
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+    
+  /* For visualization 
+  background: #808080; width: 5px;
+  */
+ }
+ 
+.centered {
+  display: inline-block;
+  vertical-align: middle;
+  width: 600px;
+  padding: 10px 15px;
+  border: #a0a0a0 solid 1px;
+  background: #f5f5f5;
+ }
+</style>
+    </head>
+
+    <body>
+
+<div class="block" style="height: 300px;">
+    
+   
+         <div class="row centered">
+                <div class="span7">
+                	<form class="form-inline" action="upload.php" enctype="multipart/form-data" method="post">
+						<div class="control-group">
+							<label class="control-label" for="archivo">Subir Archivo</label>
+							<div class="controls">
+								<input type="file" name="archivo" id="archivo">
+								<button type="submit" class="btn btn-primary">Enviar</button>
+							</div>
+						</div>
+			</form>		
+                </div>
+            </div>
+    
+    
+</div>
+        <div class="container" style="margin-top: 30px;margin-bottom: 30px">
+           
+        </div>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap-filestyle.js"></script>
+       
+
+	<script>
+		$('#archivo').filestyle({
+			classButton: 'btn btn-warning'
+		});
+	</script>
+    </body>
+</html>
